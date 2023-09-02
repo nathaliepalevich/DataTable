@@ -5,6 +5,7 @@
   justify-content: center;
   padding-top: 20px;
   width: 50%;
+
   .ant-table-container {
     min-height: 280px;
   }
@@ -12,36 +13,16 @@
   .ant-table-content table {
     width: max-content;
   }
-  .ant-table-wrapper .ant-form-item {
-    font-size: 12px;
-  }
-  
-  .ant-table-row td {
-    padding: 0 !important;
-  }
-  
   .ant-table-wrapper {
     max-width: 70%;
+
+    .ant-form-item {
+      font-size: 12px;
+    }
   }
-  
-  .ant-table-wrapper .ant-table-filter-column {
-    padding: 0 10px;
-    text-align: center;
-  }
-  
-  
-  .ant-table-thead .ant-table-cell {
-    padding: 0 !important;
-  }
-  
-  .ant-form-item-control-input {
-    min-height: 20px !important;
-    font-size: 12px;
-  }
-  
-  .first-col-align {
-    text-align: center;
-  }
+
+ 
+
   .agora {
     .ant-input {
       border: inherit;
@@ -54,7 +35,7 @@
       background-color: inherit;
     }
   }
-  
+
   .react-resizable-handle {
     position: absolute;
     right: -5px;
@@ -64,6 +45,4 @@
     height: 100%;
     cursor: col-resize;
   }
-  
 }
-

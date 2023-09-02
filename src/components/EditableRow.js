@@ -1,5 +1,5 @@
 import { Form } from 'antd';
-
+import './EditableRow.scss'
 import { EditableContext } from './EditableCell';
 
 const EditableRow = ({ index, ...props }) => {

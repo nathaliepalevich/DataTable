@@ -35,6 +35,5 @@ const letters = [
   'Y',
   'Z',
 ];
-const defaultColumns = [];
 
-export { dataRows, letters, defaultColumns };
+export { dataRows, letters };

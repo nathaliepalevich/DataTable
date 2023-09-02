@@ -4,20 +4,13 @@ import { EditableCell } from './EditableCell';
 import EditableRow from './EditableRow';
 import ResizableTitle from './ResizableTitle';
 import useSearch from '../hooks/use-search';
-import { dataRows, letters, defaultColumns } from '../InitialData/dataRows';
+import { dataRows, letters } from '../InitialData/dataRows';
 import './AgoraDataTable.scss';
 
 const AgoraDataTable = () => {
   const getColumnSearchProps = useSearch;
 
-  defaultColumns.push({
-    title: '',
-    dataIndex: 'number',
-    fixed: 'left',
-    width: 50,
-    editable: false,
-    className: 'first-col-align',
-  });
+  const defaultColumns = [];
 
   for (let i = 0; i < 10; i++) {
     defaultColumns.push({
@@ -39,6 +32,12 @@ const AgoraDataTable = () => {
 
   const [count, setCount] = useState(0);
   const [countCols, setCountCols] = useState(1);
+
+  useEffect(() => {
+    dataSourceCols.forEach((col) => {
+      localStorage.setItem(col.dataIndex + 'Width', col.width);
+    });
+  }, [dataSourceCols]);
 
   const handleAddRow = () => {
     const lastRow = dataSourceRow[dataSourceRow.length - 1];
@@ -85,12 +84,6 @@ const AgoraDataTable = () => {
       };
       setDataSourceCols(nextColumns);
     };
-
-  useEffect(() => {
-    dataSourceCols.forEach((col) => {
-      localStorage.setItem(col.dataIndex + 'Width', col.width);
-    });
-  }, [dataSourceCols]);
 
   const columns = dataSourceCols.map((col, index) => {
     if (!col.editable) {
@@ -140,13 +133,8 @@ const AgoraDataTable = () => {
         bordered
         footer={headerFunctions}
         components={{
-          header: {
-            cell: ResizableTitle,
-          },
-          body: {
-            row: EditableRow,
-            cell: EditableCell,
-          },
+          header: { cell: ResizableTitle,},
+          body: { row: EditableRow, cell: EditableCell,},
         }}
         rowClassName={() => 'editable-row agora'}
         dataSource={dataSourceRow}
