@@ -20,29 +20,23 @@ Your task is to create a React project that utilizes the Ant Design package to b
 
 To set up and run the project on your local machine, follow these steps:
 
-#### `Prerequisites`
-
-Before you begin, make sure you have the following software installed on your computer:
-
-Node.js: Download and install Node.js
-
 #### `Installation`
 
 Clone the repository to your local machine:
 
-**git clone https://github.com/nathaliepalevich/Data-Table.git**
+**git clone https://github.com/nathaliepalevich/DataTable.git**
 
 Navigate to the project directory:
 
-**cd your-repo**
+**cd DataTable**
 
-Install the project dependencies using npm or yarn:
+Install the project dependencies using npm:
 
 **npm install**
 
 #### `Running the Application`
 
-Once you have installed the dependencies, you can run the application. Make sure you are in the project directory:
+Once you have installed the dependencies, you can run the application. Make sure you are in the project directory
 
 **npm start**
 
