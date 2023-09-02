@@ -1,0 +1,69 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  width: 50%;
+  .ant-table-container {
+    min-height: 280px;
+  }
+
+  .ant-table-content table {
+    width: max-content;
+  }
+  .ant-table-wrapper .ant-form-item {
+    font-size: 12px;
+  }
+  
+  .ant-table-row td {
+    padding: 0 !important;
+  }
+  
+  .ant-table-wrapper {
+    max-width: 70%;
+  }
+  
+  .ant-table-wrapper .ant-table-filter-column {
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  
+  .ant-table-thead .ant-table-cell {
+    padding: 0 !important;
+  }
+  
+  .ant-form-item-control-input {
+    min-height: 20px !important;
+    font-size: 12px;
+  }
+  
+  .first-col-align {
+    text-align: center;
+  }
+  .agora {
+    .ant-input {
+      border: inherit;
+      padding: 0 5px;
+      font-size: 12px;
+      box-shadow: none;
+      border-color: none;
+      border-inline-end-width: 0;
+      border-radius: none;
+      background-color: inherit;
+    }
+  }
+  
+  .react-resizable-handle {
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    z-index: 1;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+  }
+  
+}
+
