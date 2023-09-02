@@ -1,71 +1,74 @@
-# Getting Started with Create React App
+# Frontend Engineer Home Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+Welcome to the Frontend Engineer Home Assignment! You will be building a powerful and user-friendly UI page that leverages the capabilities of the Ant Design Data Table while adding your own creative touch.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Assignment Overview`
 
-### `npm test`
+Your task is to create a React project that utilizes the Ant Design package to build a dynamic data table component and integrate it into a UI page.
+ The assignment is divided into several stages, including creating a custom data table component, 
+ developing a UI page, adding column width resizing, 
+ and implementing a bonus feature for column width persistence.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Getting Started`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To set up and run the project on your local machine, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `Prerequisites`
 
-### `npm run eject`
+Before you begin, make sure you have the following software installed on your computer:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Node.js: Download and install Node.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `Installation`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository to your local machine:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**git clone https://github.com/nathaliepalevich/Data-Table.git**
 
-## Learn More
+Navigate to the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**cd your-repo**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install the project dependencies using npm or yarn:
 
-### Code Splitting
+**npm install**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### `Running the Application`
 
-### Analyzing the Bundle Size
+Once you have installed the dependencies, you can run the application. Make sure you are in the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**npm start**
 
-### Making a Progressive Web App
+The application should now be running at http://localhost:3000. You can access it in your web browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `Features`
 
-### Advanced Configuration
+#### `Agora-DataTable Component`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The agora-datatable component is a custom component that builds upon the Ant Design Data Table.
+It incorporates necessary styles for seamless integration into different UI pages.
 
-### Deployment
+#### `UI Page with Data Table`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The UI page features a dynamic data table with multiple columns of varying types (text, numbers, dates, etc.). It includes search filters to quickly find specific data and paging functionality for a smooth browsing experience.
 
-### `npm run build` fails to minify
+#### `Column Width Resizing Feature`
+The agora-datatable component includes a feature that allows users to resize column widths,
+giving them control over column customization.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# DataTable
+#### `Bonus: Column Width Persistence`
+
+As a bonus feature, the project automatically saves and restores custom column widths even after page refresh.
+This enhances the usability of the data table for returning users.
+
+### `Misc`
+* The project is built using React.
+* Code quality and organization follow best practices.
+* To submit your code, create a repository (e.g., on GitHub) and push your code there.

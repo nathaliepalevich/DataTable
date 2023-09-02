@@ -3,7 +3,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import { useRef, useState } from 'react';
 
-const useColumnSearch = (dataIndex) => {
+const useSearch = (dataIndex) => {
   const [searchText, setSearchText] = useState('');
   const [searchedColumn, setSearchedColumn] = useState('');
   const searchInput = useRef(null);
@@ -132,4 +132,4 @@ const useColumnSearch = (dataIndex) => {
   };
   return getColumnSearchProps
 };
-export default useColumnSearch
+export default useSearch

@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Space, Table, Tooltip } from 'antd';
 import { EditableCell } from './EditableCell';
-import './AgoraDataTable.scss';
 import EditableRow from './EditableRow';
-import ResizableTitle from './ResizableTitle'
-import useColumnSearch from './useColumnSearch';
+import ResizableTitle from './ResizableTitle';
+import useSearch from '../hooks/use-search';
+import { dataRows, letters, defaultColumns } from '../InitialData/dataRows';
+import './AgoraDataTable.scss';
+
 const AgoraDataTable = () => {
-  let dataRows = [];
+  const getColumnSearchProps = useSearch;
 
-  for (let i = 1; i < 10; i++) {
-    dataRows.push({
-      key: i,
-      number: i,
-    });
-  }
-const getColumnSearchProps = useColumnSearch
-
-
-  let defaultColumns = [];
   defaultColumns.push({
     title: '',
     dataIndex: 'number',
@@ -26,34 +18,6 @@ const getColumnSearchProps = useColumnSearch
     editable: false,
     className: 'first-col-align',
   });
-  const letters = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-  ];
 
   for (let i = 0; i < 10; i++) {
     defaultColumns.push({
@@ -86,7 +50,7 @@ const getColumnSearchProps = useColumnSearch
     setCount(count + 1);
   };
 
-  const search = getColumnSearchProps(letters[0] + countCols)
+  const search = getColumnSearchProps(letters[0] + countCols);
 
   const handleAddCol = () => {
     const newData = {
@@ -111,18 +75,8 @@ const getColumnSearchProps = useColumnSearch
     });
     setDataSourceRow(newData);
   };
-  const components = {
-    header: {
-      cell: ResizableTitle,
-    },
-    body: {
-      row: EditableRow,
-      cell: EditableCell,
-    },
-  };
 
-  const handleResize =
-    (index) =>
+  const handleResize = index =>
     (e, { size }) => {
       const nextColumns = [...columns];
       nextColumns[index] = {
@@ -185,7 +139,15 @@ const getColumnSearchProps = useColumnSearch
       <Table
         bordered
         footer={headerFunctions}
-        components={components}
+        components={{
+          header: {
+            cell: ResizableTitle,
+          },
+          body: {
+            row: EditableRow,
+            cell: EditableCell,
+          },
+        }}
         rowClassName={() => 'editable-row agora'}
         dataSource={dataSourceRow}
         columns={columns}
